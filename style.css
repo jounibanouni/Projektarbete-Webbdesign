@@ -12,34 +12,31 @@ body {
     background: beige;
 }
 
-.content-container {
-    display: grid;
-    height: 100vh;
-    width: 100vw;
-    grid-template-columns: 1fr repeat(12, minmax(auto, 6rem)) 1fr;
-    grid-template-rows: 6rem 15rem auto;
-    overflow: hidden;
-}
-
 header {
-    display: grid;
-    grid-template-columns: 1fr repeat(12, minmax(auto, 6rem)) 1fr;
-    grid-template-rows: 6rem 15rem auto;
-    grid-column: 1 / span 14;
-    grid-row: 1/2;
+    position: relative;
+    height: 10vh;
+    min-height: 70px;
+    width: 100%;
     background-color: rgba(165, 42, 42, 0.9);
     z-index: 99;
 }
 
+.header-wrapper {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto 0;
+    display: flex;
+    justify-content: space-around;
+}
+
 .logo-container {
-    grid-column: 2 / 3;
-    grid-row: 1/2;
+    height: 100%;
+    width: 8%;
     padding: 0.5em;
 }
 
 nav {
-    grid-column: 3 / span 7;
-    grid-row: 1/2;
+    width: 50%;
 }
 
 ul {
@@ -79,38 +76,46 @@ input {
     margin-bottom: 0.5rem;
 }
 
-.mainmain {
-    display: grid;
-    grid-template-columns: 1fr repeat(12, minmax(auto, 6rem)) 1fr;
-    grid-template-rows: 6rem 15rem auto;
-    grid-column: 1/ span 14;
-    grid-row: 1/ span 3;
+.hero-wrapper {
+    position: fixed;
+    top: 0;
+    z-index: -10;
 }
 
-.product-main {
-    display: grid;
-    grid-template-columns: 1fr repeat(12, minmax(auto, 6rem)) 1fr;
-    grid-template-rows: 6rem 10rem auto;
-    grid-column: 1/ span 14;
-    grid-row: 2/ 3;
+main {
+    display: flex;
+    align-items: flex-end;
+    width: 70%;
+    height: 90vh;
+    margin: 0 auto 0;
+}
+
+.product-main-view {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background: gray;
 }
 
 .hero-img {
-    grid-column: 1/span 14;
-    grid-row: 1/span 3;
     height: 100%;
     width: 100%;
 }
 
-article {
-    grid-column: 2 / 8;
-    grid-row: 3 / span 4;
+.hero-info {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    width: 50%;
     color: white;
     font-size: 1.6rem;
+    margin-bottom: 15rem;
 }
 
-.product-main-view {
-    grid-column: 2 / span 12;
-    grid-row: 2/ 3;
-    background: black;
+.product-option {
+    height: 30em;
+    width: 28%;
+    background: red;
 }
